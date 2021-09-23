@@ -11,3 +11,8 @@ exports.createUser = async (req, res) => {
 
     res.json(result);
 };
+
+exports.allUsers = async (req, res) => {
+    const users = await user.findAll({})
+    res.json(users);
+};
